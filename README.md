@@ -23,7 +23,7 @@ for recoloring images using interactive interface at [colorsandbox.com](https://
 
 The main script that runs over a whole directory of images is available here:
 ```
-./python/learn/tf/color/run_fitting_experiment.sh $TEST_IMG_DIR $OUTPUT_DIR
+./colortriads/learn/tf/color/run_fitting_experiment.sh $TEST_IMG_DIR $OUTPUT_DIR
 ```
 This script should be run twice, with a manual MATLAB step in between. 
 
@@ -47,7 +47,7 @@ unzip ~/Downloads/triad_network.zip -d models/.
 Note that the port of the network from earlier version of tensorflow is not very 
 careful and there could be issues. To fit triads with a neural network, run:
 ```
-./python/learn/tf/color/run_fitting_experiment.sh $TEST_IMG_DIR $OUTPUT_DIR
+./colortriads/learn/tf/color/run_fitting_experiment.sh $TEST_IMG_DIR $OUTPUT_DIR
 ```
 If you want to skip neural
 network fitting, just run `mkdir $OUTPUT_DIR/palettes_deep` instead.
@@ -69,7 +69,7 @@ After this, your `$OUTPUT_DIR` will contain two subdirectories for fitted palett
 The next step is computing the mapping from image pixels to color triad. To do that, simply re-run the same script:
 
 ```
-./python/learn/tf/color/run_fitting_experiment.sh $TEST_IMG_DIR $OUTPUT_DIR
+./colortriads/learn/tf/color/run_fitting_experiment.sh $TEST_IMG_DIR $OUTPUT_DIR
 ```
 
 Now, you will have `mappings` subdirectories containing the binary mapping files that can be used on colorsandbox.com.

@@ -32,3 +32,4 @@ venv
 models
 *.ipynb_checkpoints*
 *.egg-info
+experiments
